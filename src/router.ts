@@ -63,4 +63,10 @@ body('description').exists().isString(),
 
 router.delete("/updatepoint/:id", (req, res) => {});
 
+router.use((err, req, res, next) => {
+
+        res.status(400).json({message: 'invalid input router'})
+
+})
+
 export default router;
